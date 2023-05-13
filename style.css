@@ -16,40 +16,47 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: #223243; */
-    background: linear-gradient(to bottom, #7d4d98,#fff,#d3d3d3,#ffd700);
-    background-size: 400% 400%;
+    background: #223243;
+        /* background:#633972; */
   }
-  section{
-    padding: 30px;
+  .container{
+    padding: 20px;
     border-radius: 20px;
-    border: 2px solid #9F80B1;
+    border: 8px solid #223243;
     box-shadow: -5px -5px 15px rgba(255,255,255,0.1),
     5px 5px 15px rgba(0,0,0,0.35),
     inset -5px -5px 15px rgba(255,255,255,0.1),
     inset 5px 5px 15px rgba(0,0,0,0.35);
   }
-  section .form{
+  .container .form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 25px;
   }
-  section .form h2{
+  .container .form.signin,
+  .container.signinform .form.signup
+  {
+    display: none;
+  }
+  .container.signinform .form.signin{
+    display: flex;
+  }
+  .container .form h2{
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.1em;
   }
-  section .form .inputbox{
+  .container .form .inputbox{
     position: relative;
     width: 300px;
   }
-  section .form .inputbox input{
+  .container .form .inputbox input{
     padding: 12px 10px 12px 48px;
     border: none;
     width: 100%;
-    background: #9F80B1;
+    background: #223243;
     border: 1px solid rgba(0,0,0,0.1);
     color: #fff;
     font-weight: 300;
@@ -81,22 +88,33 @@
     color:#ffd700 ;
     border-right: 1px solid #ffd700;
   }
-  section .form .inputbox input:valid ~ span,section .form .inputbox input:focus ~ span{
+  .container .form .inputbox input:valid ~ span,.container .form .inputbox input:focus ~ span{
     color: #ffd700;
     border: 1px solid #ffd700;
-    transform: translateX(25px) translateY(-6px);
+    background: #223243;
+    transform: translateX(25px) translateY(-7px);
     font-size: 0.6em;
     padding: 0 8px;
     border-radius: 10px;
     letter-spacing: 0.1em;
   }
-  section .form .inputbox input:valid,
-  section .form .inputbox input:focus{
+  .container .form .inputbox input:valid,
+  .container .form .inputbox input:focus{
     border: 1px solid #ffd700;
   }
-  section .form .inputbox input[type="submit"]{
-    background: #d4b100;
-    color: #7d4d98;
+  .container .form .inputbox input[type="submit"]{
+    background: #ffd700;
+    color: #633972;
 
+  }
+  .form p{
+    color: rgba(255,255,255,0.6);
+    font-size: .8em;
+    font-weight: 300;
+  }
+  .form p a {
+    font-weight: 500;
+    color: #ffd700;
+    text-decoration: none;
   }
   
